@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Physical and logical storage measurements</title>
+  <desc id="desc">A file has logical bytes and allocated physical blocks. Many small files can make physical usage larger than logical size.</desc>
+  <defs><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#172033}.title{font-size:28px;font-weight:700}.label{font-size:20px;font-weight:650}.small{font-size:16px}.logical{fill:#eaf2ff;stroke:#4263a5;stroke-width:2}.physical{fill:#fff2df;stroke:#b7791f;stroke-width:2}.note{fill:#eef8f1;stroke:#237a4b;stroke-width:2}.line{stroke:#58657a;stroke-width:3;fill:none}</style></defs>
+  <rect width="1200" height="560" fill="#fff"/>
+  <text x="60" y="58" class="title">Why the two numbers can differ</text>
+  <text x="60" y="88" class="small">The report keeps content size and allocated disk space separate instead of calling one “wrong”.</text>
+  <rect x="80" y="145" width="440" height="210" rx="18" class="logical"/>
+  <text x="300" y="190" text-anchor="middle" class="label">Logical size</text>
+  <text x="300" y="230" text-anchor="middle" class="small">sum of st_size</text>
+  <text x="300" y="275" text-anchor="middle" class="small">bytes in file contents</text>
+  <text x="300" y="315" text-anchor="middle" class="small">useful for understanding data volume</text>
+  <path d="M540 250 H660" class="line"/>
+  <text x="600" y="230" text-anchor="middle" class="small">same files</text>
+  <rect x="680" y="145" width="440" height="210" rx="18" class="physical"/>
+  <text x="900" y="190" text-anchor="middle" class="label">Physical usage</text>
+  <text x="900" y="230" text-anchor="middle" class="small">sum of st_blocks × 512</text>
+  <text x="900" y="275" text-anchor="middle" class="small">allocated filesystem blocks</text>
+  <text x="900" y="315" text-anchor="middle" class="small">closer to Finder / du</text>
+  <rect x="170" y="405" width="860" height="90" rx="18" class="note"/>
+  <text x="600" y="443" text-anchor="middle" class="label">Typical difference</text>
+  <text x="600" y="473" text-anchor="middle" class="small">Many tiny files, filesystem block rounding, sparse files, or hard links can change the relationship.</text>
+</svg>
