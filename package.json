@@ -1,0 +1,69 @@
+{
+  "name": "dsh-storage-inspector",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH 存储体检：把 ~/.dsh 的磁盘占用语义分层显示，给出可解释的清理建议。只读、纯本地。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "prepublishOnly": "node --test test/*.test.mjs && node scripts/preflight.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "disk-usage",
+    "cleanup",
+    "inspector",
+    "storage"
+  ],
+  "license": "MIT",
+  "author": "廷宇",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OnebugIS/dsh-storage-inspector.git"
+  },
+  "homepage": "https://github.com/OnebugIS/dsh-storage-inspector#readme",
+  "bugs": {
+    "url": "https://github.com/OnebugIS/dsh-storage-inspector/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.3"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  }
+}

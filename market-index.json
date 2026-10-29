@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "title": {
+    "en": "dsh-storage-inspector",
+    "zh": "dsh-storage-inspector"
+  },
+  "description": {
+    "en": "A self-hosted DSH plugin index for dsh-storage-inspector.",
+    "zh": "dsh-storage-inspector 的自托管 DSH 插件索引。"
+  },
+  "metadata": {
+    "categories": {
+      "storage": {
+        "title": {
+          "en": "Storage",
+          "zh": "存储"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-storage-inspector",
+      "title": {
+        "en": "Storage Inspector",
+        "zh": "存储体检"
+      },
+      "description": {
+        "en": "Shows where the DSH directory spends disk space, module by module, with dual physical/logical units, largest files, and three-tier cleanup advice that explains what is safe, careful, or forbidden. Read-only and fully local.",
+        "zh": "按模块显示 DSH 目录的磁盘占用，给出物理/逻辑双口径、最大文件与三层清理建议（可删 / 谨慎 / 禁止）并说明原因。只读、纯本地、不联网。"
+      },
+      "author": "廷宇",
+      "icon": "https://raw.githubusercontent.com/OnebugIS/dsh-storage-inspector/main/icon.svg",
+      "homepage": "https://github.com/OnebugIS/dsh-storage-inspector",
+      "repository": {
+        "url": "https://github.com/OnebugIS/dsh-storage-inspector"
+      },
+      "metadata": {
+        "category": "storage",
+        "keywords": ["disk-usage", "cleanup", "inspector", "storage", "dsh"]
+      },
+      "versions": []
+    }
+  ]
+}

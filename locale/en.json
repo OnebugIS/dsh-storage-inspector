@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "Storage",
+    "description": "Shows where the DSH directory spends disk space, module by module, and explains what can be deleted and why. Read-only, local, offline."
+  },
+  "storage": {
+    "title": "Storage",
+    "total": "DSH usage",
+    "reclaimable": "Reclaimable"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "存储",
+    "description": "把 DSH 目录的磁盘占用按模块分层显示，并解释哪些能删、为什么。只读、纯本地、不联网。"
+  },
+  "storage": {
+    "title": "存储",
+    "total": "DSH 占用",
+    "reclaimable": "可回收"
+  }
+}

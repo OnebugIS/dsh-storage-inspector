@@ -1,0 +1,13 @@
+# dsh-storage-inspector bundle patch
+#
+# 一行挂两端：host 侧（storage_report 工具 + /api/storage/report 路由）
+# 与 client 侧（设置页「存储」分区）。client 半由 dsh.client.platform=web
+# 自动从本包 lib/client.js 加载，不需要第二行。
+#
+# 覆盖本行时注意：DSH 的 patch 是「同 id 整段替换 config」，不是合并。
+- insert:
+    - id: storage-inspector
+      name: 'dsh-storage-inspector'
+      config:
+        cacheTtlMs: 300000
+        timeoutMs: 10000
