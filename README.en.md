@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](./LICENSE)
 [![Read-only](https://img.shields.io/badge/design-read--only-8b5cf6?style=flat-square)](#safety-and-privacy)
 
-> **V1 / read-only preview.** No delete, move, or upload operation is enabled. npm publishing and automatic cleanup are intentionally not enabled yet.
+> **V1 / read-only.** No delete, move, or upload operation is enabled. Automatic cleanup is intentionally not enabled.
 
 ## Contents
 
@@ -103,7 +103,12 @@ When `complete` is `false`, the numbers are **partial results**, not a complete 
 ### Quick start
 
 1. Confirm the DSH and Node.js versions in the table above;
-2. Install with the `link:` command below;
+2. Install from npm:
+
+   ```bash
+   dsh plugin --profile desktop add dsh-storage-inspector
+   ```
+
 3. Restart DSH;
 4. Start a new session and ask “How much disk space does DSH use?” to verify `storage_report`;
 5. Open **Settings → Storage** for the visual report.
@@ -135,15 +140,15 @@ cd dsh-storage-inspector
 # then use the link: installation command above
 ```
 
-### From npm (not available yet)
+### From npm
 
-The planned command is:
+After the package is published, the recommended command is:
 
 ```bash
 dsh plugin --profile desktop add dsh-storage-inspector
 ```
 
-`package.json` is still `private: true`; treat this as a future plan, not a currently available installation method.
+If the npm version has not propagated yet, use the GitHub `link:` development installation above temporarily.
 
 ## Usage
 

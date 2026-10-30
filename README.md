@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](./LICENSE)
 [![Read-only](https://img.shields.io/badge/design-read--only-8b5cf6?style=flat-square)](#安全与隐私)
 
-> 当前版本是 **V1 / 只读预览版**。它不会删除、移动或上传任何文件；npm 发布和自动清理功能仍未开启。
+> 当前版本是 **V1 / 只读版**。它不会删除、移动或上传任何文件；自动清理功能尚未开启。
 
 ## 目录
 
@@ -105,7 +105,12 @@ logical bytes  = 所有文件 st_size 之和
 ### 快速开始
 
 1. 确认 DSH 与 Node.js 版本符合上表；
-2. 用下面的 `link:` 命令安装；
+2. 从 npm 安装：
+
+   ```bash
+   dsh plugin --profile desktop add dsh-storage-inspector
+   ```
+
 3. 重启 DSH；
 4. 新建一个会话，询问“DSH 占多少空间？”验证 `storage_report`；
 5. 打开 **设置 → 存储** 查看图形化报告。
@@ -137,15 +142,15 @@ cd dsh-storage-inspector
 # 再使用上面的 link: 安装命令
 ```
 
-### 从 npm 安装（尚未开放）
+### 从 npm 安装
 
-未来计划使用：
+正式发布后，推荐使用：
 
 ```bash
 dsh plugin --profile desktop add dsh-storage-inspector
 ```
 
-当前 `package.json` 仍为 `private: true`，因此不要把 npm 安装命令当作当前可用步骤。
+如果 npm 版本尚未同步，可暂时使用上面的 GitHub `link:` 开发安装方式。
 
 ## 使用
 

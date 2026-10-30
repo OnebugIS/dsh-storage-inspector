@@ -1,7 +1,6 @@
 {
   "name": "dsh-storage-inspector",
   "version": "0.1.0",
-  "private": true,
   "description": "DSH 存储体检：把 ~/.dsh 的磁盘占用语义分层显示，给出可解释的清理建议。只读、纯本地。",
   "type": "module",
   "main": "lib/index.js",
@@ -15,10 +14,12 @@
   "files": [
     "lib",
     "locale",
+    "docs",
     "icon.svg",
     "cordis.patch.yml",
     "README.md",
     "README.en.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "scripts": {
